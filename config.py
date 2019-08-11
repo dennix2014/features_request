@@ -1,4 +1,8 @@
-from local_config import Config as K
+try:
+    from local_config import Config as K
+except ImportError:
+    pass
+
 
 
 
