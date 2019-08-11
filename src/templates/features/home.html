@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block app_content %}
+<section class="padding" id="blog">
+      <div class="container">
+        <h2 class="section-title text-center">Features Requests</h2>
+
+<div class="section-body">
+          <div class="row">
+            {% for feature in features %}
+            <div class="col-xs-6 col-md-4">
+              <article class="card bg-dark">
+                <div class="card-body">
+                  <a class="card-title title-sm" href="{{ url_for('features.edit_feature', feature_id=feature.id) }}"><h4 class="animated fadeInRight ">{{ feature.title }}</h4></a>
+                  <p class="card-text animated fadeInDown text-light">{{ feature.description }}</p>
+                  <p class="card-text animated fadeInUp text-light font-weight-bold"><strong>Client: </strong>{{ feature.client }}</p>
+                  <p class="card-text animated fadeInDown text-light"><strong> Client Priority: </strong>{{ feature.client_priority }}</p>
+                  <p class="card-text animated fadeInUp text-light"><strong>Target Date: </strong> {{ feature.target_date }}</p>
+                </div>
+              </article>
+              <br>
+              <br>
+            </div>
+              {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+
+
+    
+        {% endblock %}
+
+        
+       

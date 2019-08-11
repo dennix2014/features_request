@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+    
+
+<div class="section-body">
+          <div class="row col-spacing">
+             {% for feature in features %}
+              <div class="clearfix visible-xs-block"></div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card bg-dark">
+                <div class="card-body">
+                  <a class="card-title animated fadeInRight text-warning title-sm" href="{{ url_for('features.edit_feature', feature_id=feature.id) }}"><h4>{{ feature.title }}</h4></a>
+                  <p class="card-text animated fadeInDown text-light">{{ feature.description }}</p>
+                </div>
+              </article>
+              <br>
+              <br>
+            </div>
+            <div class="clearfix visible-xs-block"></div>
+              {% endfor %}
+          </div>
+        </div>
+        {% endblock %}
+
+        
+       
