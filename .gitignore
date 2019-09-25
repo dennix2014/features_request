@@ -3,10 +3,12 @@
 
 ### Django ###
 *.log
+*.sock
 *.pot
 *.pyc
 __pycache__/
 local_config.py
+features_request.ini
 db.sqlite3
 /media
 /static
