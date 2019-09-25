@@ -12,3 +12,7 @@ A "feature request" is a request for a new feature that will be added onto an ex
 * Client Priority: A numbered priority according to the client (1...n). Client Priority numbers should   not repeat for the given client, so if a priority is set on a new feature as "1", then all other       feature requests for that client should be reordered.
 * Target Date: The date that the client is hoping to have the feature.
 * Product Area: A selection list of product areas (use 'Policies', 'Billing', 'Claims', 'Reports')
+
+
+
+The app is hosted at https://project.denixx.com but the web server is turned off to minimize running costs. It will be immediately turned on upon request.
